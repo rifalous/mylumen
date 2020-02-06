@@ -1,4 +1,4 @@
-# My Lumen PHP Framework Project - Rivaldy Fauzan M.
+# Lumen PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
 [![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
@@ -26,7 +26,7 @@ The Lumen framework is open-sourced software licensed under the [MIT license](ht
 ## Notes
 This project is made for Learn Purposes.
 
-## What I've Learned :
+## What I've Learned
 - PHP Lumen REST API (GET, POST, PUT, DELETE)
 - PHP Lumen Response API Request Header, Request Body
 - PHP Lumen Error Handling Response
