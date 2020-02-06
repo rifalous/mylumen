@@ -1,0 +1,201 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My Lumen API Documentation",
+        "contact": {
+            "name": "Production Team",
+            "email": "rifalous@gmail.com"
+        },
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/categories/": {
+            "get": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Get All Data Categories",
+                "operationId": "App\\Http\\Controllers\\CategoryController::index",
+                "responses": {
+                    "200": {
+                        "description": "Successful Operation"
+                    }
+                }
+            }
+        },
+        "/api/categories": {
+            "post": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Adds a new category",
+                "operationId": "App\\Http\\Controllers\\CategoryController::store",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "name": "Footwear"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "500": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/api/categories/{id}": {
+            "delete": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Deletes a category",
+                "operationId": "App\\Http\\Controllers\\CategoryController::delete",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Category id to delete",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "500": {
+                        "description": "Error"
+                    },
+                    "404": {
+                        "description": "Category ID is Not Found"
+                    }
+                }
+            }
+        },
+        "/api/products/": {
+            "get": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Get All Data Products",
+                "operationId": "App\\Http\\Controllers\\ProductController::index",
+                "responses": {
+                    "200": {
+                        "description": "Successful Operation"
+                    }
+                }
+            }
+        },
+        "/api/products": {
+            "post": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Adds a new product",
+                "operationId": "App\\Http\\Controllers\\ProductController::store",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "header",
+                        "required": true,
+                        "style": "form"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "category_id": {
+                                        "type": "string"
+                                    },
+                                    "slug": {
+                                        "type": "string"
+                                    },
+                                    "price": {
+                                        "type": "string"
+                                    },
+                                    "weight": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "name": "Jacket Branded Lossy Wear",
+                                    "category_id": 3,
+                                    "slug": "jacket",
+                                    "price": 300000,
+                                    "weight": 1300,
+                                    "description": "Jacket Branded Lossy Wear"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "500": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/api/products/{id}": {
+            "delete": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Deletes a products",
+                "operationId": "App\\Http\\Controllers\\ProductController::delete",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Product id to delete",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "500": {
+                        "description": "Error"
+                    },
+                    "404": {
+                        "description": "Product ID is Not Found"
+                    }
+                }
+            }
+        }
+    }
+}
