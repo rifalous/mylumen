@@ -1,6 +1,4 @@
-# My Lumen Project - Rivaldy Fauzan M.
-
-# Lumen PHP Framework
+# My Lumen PHP Framework Project - Rivaldy Fauzan M.
 
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
 [![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
