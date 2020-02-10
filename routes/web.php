@@ -28,6 +28,10 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->post('categories', 'CategoryController@store');     
     $router->put('categories/{id}', 'CategoryController@update');     
     $router->delete('categories/{id}', 'CategoryController@delete'); 
+    
+    $router->get('/key', function() {
+        return \Illuminate\Support\Str::random(32);
+    });
 });
 
 
